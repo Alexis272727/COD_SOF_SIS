@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+# Zonas Horarias
+
+# Diferencia horaria respecto a la Ciudad de México (UTC-6)
+zonas_horarias = {
+    "Dublín": 6,
+    "Londres": 7,
+    "Tokio": 15,
+    "Los Ángeles": -2,
+    "Nueva York": 2,
+    "Nueva Delhi": 11.3
+}
+
+# Solicitar la hora en México
+hora_mexico = float(input("Ingresa la hora en México (formato 12 horas, sin AM/PM): "))
+periodo = input("Es AM o PM? (Escribe AM o PM): ").strip().upper()
+
+# Convertir a 24 horas para calcular correctamente
+if periodo == "PM" and hora_mexico != 12:
+    hora_mexico += 12
+elif periodo == "AM" and hora_mexico == 12:
+    hora_mexico = 0  # Medianoche
+
+# Calcular y mostrar la hora en cada ciudad
+print("\nLa hora en las siguientes ciudades sería:")
+
+for ciudad, diferencia in zonas_horarias.items():
+    hora_ciudad = hora_mexico + diferencia
+    if hora_ciudad >= 24:
+        hora_ciudad -= 24
+    elif hora_ciudad < 0:
+        hora_ciudad += 24
+    
+    # Convertir a formato de 12 horas
+    if hora_ciudad == 0:
+        hora_final = 12
+        periodo_ciudad = "AM"
+    elif hora_ciudad < 12:
+        hora_final = hora_ciudad
+        periodo_ciudad = "AM"
+    elif hora_ciudad == 12:
+        hora_final = 12
+        periodo_ciudad = "PM"
+    else:
+        hora_final = hora_ciudad - 12
+        periodo_ciudad = "PM"
+    
+    print(f"{ciudad}: {hora_final:.2f} {periodo_ciudad}")
+
