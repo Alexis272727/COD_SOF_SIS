@@ -1,0 +1,94 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+# Capturar el nombre de la ciudad
+ciudad = "Paris"  # Ejemplo: "Paris"
+
+# Mostrar el monumento más famoso según la ciudad
+if ciudad.lower() == "delhi":
+    print("El monumento más famoso de Delhi es el Red Fort.")
+elif ciudad.lower() == "paris":
+    print("El monumento más famoso de París es la Torre Eiffel.")
+elif ciudad.lower() == "nueva york":
+    print("El monumento más famoso de Nueva York es la Estatua de la Libertad.")
+elif ciudad.lower() == "rio de janeiro":
+    print("El monumento más famoso de Río de Janeiro es el Cristo Redentor.")
+else:
+    print("Lo siento, no tengo información sobre esa ciudad.")
+
+
+# In[3]:
+
+
+# Capturar la edad de la persona
+edad = 17  # Ejemplo: 17 años
+
+# Verificar si puede votar
+if edad >= 18:
+    print("Puedes votar.")
+else:
+    print("No puedes votar.")
+
+
+# In[5]:
+
+
+# Capturar dos números
+num1 = 15  # Ejemplo: 15
+num2 = 10  # Ejemplo: 10
+
+# Identificar el menor número
+if num1 < num2:
+    print(f"El número menor es {num1}.")
+elif num2 < num1:
+    print(f"El número menor es {num2}.")
+else:
+    print("Ambos números son iguales.")
+
+
+# In[7]:
+
+
+# Capturar las edades de las 4 personas
+edad1 = 22  # Ejemplo: 22
+edad2 = 19  # Ejemplo: 19
+edad3 = 24  # Ejemplo: 24
+edad4 = 20  # Ejemplo: 20
+
+# Identificar la persona de menor edad
+menor_edad = min(edad1, edad2, edad3, edad4)
+
+if menor_edad == edad1:
+    print("La primera persona es la de menor edad.")
+elif menor_edad == edad2:
+    print("La segunda persona es la de menor edad.")
+elif menor_edad == edad3:
+    print("La tercera persona es la de menor edad.")
+else:
+    print("La cuarta persona es la de menor edad.")
+
+
+# In[9]:
+
+
+# Capturar la palabra del usuario
+palabra = "Hola"  # Ejemplo: "Hola"
+
+# Verificar si la letra es mayúscula o minúscula
+for letra in palabra:
+    if letra.isupper():
+        print(f"La letra '{letra}' es mayúscula.")
+    elif letra.islower():
+        print(f"La letra '{letra}' es minúscula.")
+    else:
+        print(f"La letra '{letra}' no es una letra válida.")
+
+
+# In[ ]:
+
+
+
+
