@@ -1,0 +1,91 @@
+Alexis Sandoval Madero 2J 4 De Marzo del 2025
+
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "3f34c8f9-9f14-4087-b0eb-12133e39554f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Ingresa la cantidad de pesos a convertir:  1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Los pesos equivalen a:\n",
+      "0.36 yuanes\n",
+      "7.14 yenes\n",
+      "0.05 dólares\n",
+      "0.05 euros\n",
+      "0.04 libras\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Conversor de divisas\n",
+    "\n",
+    "# Valores de conversión (1 peso mexicano a cada divisa)\n",
+    "yuan = 2.81\n",
+    "yen = 0.14\n",
+    "dolar = 20.49\n",
+    "euro = 21.28\n",
+    "libra = 25.5\n",
+    "\n",
+    "# Solicitar cantidad de pesos al usuario\n",
+    "pesos = float(input(\"Ingresa la cantidad de pesos a convertir: \"))\n",
+    "\n",
+    "# Calcular equivalencias\n",
+    "equivalencia_yuan = pesos / yuan\n",
+    "equivalencia_yen = pesos / yen\n",
+    "equivalencia_dolar = pesos / dolar\n",
+    "equivalencia_euro = pesos / euro\n",
+    "equivalencia_libra = pesos / libra\n",
+    "\n",
+    "# Mostrar resultados\n",
+    "print(\"\\nLos pesos equivalen a:\")\n",
+    "print(f\"{equivalencia_yuan:.2f} yuanes\")\n",
+    "print(f\"{equivalencia_yen:.2f} yenes\")\n",
+    "print(f\"{equivalencia_dolar:.2f} dólares\")\n",
+    "print(f\"{equivalencia_euro:.2f} euros\")\n",
+    "print(f\"{equivalencia_libra:.2f} libras\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ef3bf672-1ded-4978-be6b-791fdd4f1c9f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "anaconda-2024.02-py310",
+   "language": "python",
+   "name": "conda-env-anaconda-2024.02-py310-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.14"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
