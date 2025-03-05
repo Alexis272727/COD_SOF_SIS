@@ -1,0 +1,119 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+# Capturar el porcentaje del alumno
+porcentaje = 85  # Ejemplo: 85%
+
+# Evaluar el grado
+if porcentaje > 90:
+    grado = "A"
+elif 80 < porcentaje <= 90:
+    grado = "B"
+elif 60 <= porcentaje <= 80:
+    grado = "C"
+else:
+    grado = "D"
+
+# Mostrar el grado
+print(f"El grado del alumno es: {grado}")
+
+
+# In[ ]:
+
+
+# Capturar el precio de la bicicleta
+precio = 120000  # Ejemplo: 120,000
+
+# Calcular el impuesto según el precio
+if precio > 100000:
+    impuesto = precio * 0.15
+elif 50000 < precio <= 100000:
+    impuesto = precio * 0.10
+else:
+    impuesto = precio * 0.05
+
+# Mostrar el impuesto a pagar
+print(f"El impuesto a pagar es: {impuesto}")
+
+
+# In[ ]:
+
+
+# Capturar el año
+año = 2024  # Ejemplo: 2024
+
+# Verificar si el año es bisiesto
+if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+    print(f"El año {año} es bisiesto.")
+else:
+    print(f"El año {año} no es bisiesto.")
+
+
+# In[7]:
+
+
+# Capturar el número del 1 al 7
+numero = 4  # Ejemplo: 4
+
+# Mostrar el día de la semana
+if numero == 1:
+    print("Domingo")
+elif numero == 2:
+    print("Lunes")
+elif numero == 3:
+    print("Martes")
+elif numero == 4:
+    print("Miércoles")
+elif numero == 5:
+    print("Jueves")
+elif numero == 6:
+    print("Viernes")
+elif numero == 7:
+    print("Sábado")
+else:
+    print("Número inválido.")
+
+
+# In[5]:
+
+
+# Capturar el número del mes
+mes = 2  # Ejemplo: 2
+
+# Mostrar el mes y sus días
+if mes == 1:
+    print("Enero tiene 31 días.")
+elif mes == 2:
+    print("Febrero tiene 28 días (29 si es bisiesto).")
+elif mes == 3:
+    print("Marzo tiene 31 días.")
+elif mes == 4:
+    print("Abril tiene 30 días.")
+elif mes == 5:
+    print("Mayo tiene 31 días.")
+elif mes == 6:
+    print("Junio tiene 30 días.")
+elif mes == 7:
+    print("Julio tiene 31 días.")
+elif mes == 8:
+    print("Agosto tiene 31 días.")
+elif mes == 9:
+    print("Septiembre tiene 30 días.")
+elif mes == 10:
+    print("Octubre tiene 31 días.")
+elif mes == 11:
+    print("Noviembre tiene 30 días.")
+elif mes == 12:
+    print("Diciembre tiene 31 días.")
+else:
+    print("Número de mes inválido.")
+
+
+# In[ ]:
+
+
+
+
