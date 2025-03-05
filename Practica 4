@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+# Pedir datos al usuario
+nombre = input("¿Cuál es tu nombre? ")
+edad = input("¿Cuántos años tienes? ")
+profesion = input("¿Qué deseas estudiar o ser en el futuro? ")
+
+# Mostrar el resultado con los datos ingresados
+print("\nSolución aquí:")
+print(f"Mi nombre es {nombre} y tengo {edad} años de edad.")
+print(f"También, siempre he querido ser {profesion}.")
+print("¡Gracias por leerme!")
+
+
+# In[ ]:
+
+
+
+
