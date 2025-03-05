@@ -1,0 +1,90 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "214ccbb9-1291-4622-952b-2bc262bf2970",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Has vivido aproximadamente 5827 días.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Definimos la cantidad de días en cada mes\n",
+    "meses = {\n",
+    "    \"enero\": 31, \"febrero\": 28, \"marzo\": 31, \"abril\": 30, \"mayo\": 31, \"junio\": 30,\n",
+    "    \"julio\": 31, \"agosto\": 31, \"septiembre\": 30, \"octubre\": 31, \"noviembre\": 30, \"diciembre\": 31\n",
+    "}\n",
+    "\n",
+    "# Datos de nacimiento\n",
+    "dia_nac = 22\n",
+    "mes_nac = \"febrero\"\n",
+    "año_nac = 2009\n",
+    "\n",
+    "# Fecha actual\n",
+    "dia_hoy = 5\n",
+    "mes_hoy = \"febrero\"\n",
+    "año_actual = 2025\n",
+    "\n",
+    "# Función para contar años bisiestos entre dos años\n",
+    "def contar_bisiestos(año_inicio, año_fin):\n",
+    "    return sum(1 for año in range(año_inicio, año_fin + 1) if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0))\n",
+    "\n",
+    "# Calcular los días vividos\n",
+    "dias_totales = 0\n",
+    "\n",
+    "# Días desde el nacimiento hasta el final de ese año\n",
+    "dias_totales += meses[mes_nac] - dia_nac\n",
+    "for mes in list(meses.keys())[list(meses.keys()).index(mes_nac) + 1:]:\n",
+    "    dias_totales += meses[mes]\n",
+    "\n",
+    "# Días de los años completos vividos\n",
+    "dias_totales += (año_actual - año_nac - 1) * 365\n",
+    "\n",
+    "# Sumar años bisiestos\n",
+    "dias_totales += contar_bisiestos(año_nac, año_actual - 1)\n",
+    "\n",
+    "# Días desde el inicio del año actual hasta hoy\n",
+    "for mes in list(meses.keys())[:list(meses.keys()).index(mes_hoy)]:\n",
+    "    dias_totales += meses[mes]\n",
+    "dias_totales += dia_hoy\n",
+    "\n",
+    "print(f\"Has vivido aproximadamente {dias_totales} días.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "07febdf0-f6c1-41db-8241-33f6db31ee71",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "anaconda-panel-2023.05-py310",
+   "language": "python",
+   "name": "conda-env-anaconda-panel-2023.05-py310-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
