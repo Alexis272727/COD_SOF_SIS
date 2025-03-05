@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+# Días en cada mes de un año normal
+meses_dias = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+# Fecha de nacimiento
+dia_nac = 22
+mes_nac = 2  # Febrero
+año_nac = 2009
+
+# Fecha actual
+dia_hoy = 5
+mes_hoy = 3  # Marzo
+año_actual = 2025
+
+# Función para verificar si un año es bisiesto
+def es_bisiesto(año):
+    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
+
+# Calcular días vividos
+dias_totales = 0
+
+# Sumar días de los años completos vividos
+for año in range(año_nac, año_actual):
+    dias_totales += 366 if es_bisiesto(año) else 365
+
+# Restar los días desde el nacimiento hasta final del primer año
+if es_bisiesto(año_nac):
+    meses_dias[1] = 29  # Febrero con 29 días en año bisiesto
+dias_totales -= sum(meses_dias[mes_nac - 1:]) - dia_nac
+
+# Sumar los días del año actual hasta hoy
+if es_bisiesto(año_actual):
+    meses_dias[1] = 29  # Febrero con 29 días en año bisiesto
+dias_totales += sum(meses_dias[:mes_hoy - 1]) + dia_hoy
+
+# Mostrar resultado
+print(f"Has vivido aproximadamente {dias_totales} días.")
+
