@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+# Preguntar al usuario por su nombre y edad
+nombre = input("¿Cuál es tu nombre? ")
+edad = int(input("¿Cuántos años tienes? "))
+
+# Calcular el año en el que tendrá 100 años
+import datetime
+año_actual = datetime.datetime.now().year
+año_100 = año_actual + (100 - edad)
+
+# Mostrar el mensaje con el año
+print(f"{nombre}, tendrás 100 años en el año {año_100}.")
+
+
+# In[ ]:
+
+
+
+
